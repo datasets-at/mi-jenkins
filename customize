@@ -1,0 +1,29 @@
+#!/usr/bin/bash
+
+PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
+
+# Exit if any commands fail
+set -o errexit
+
+# Ensure we have updated standard packages
+echo "* Updating standard packages.";
+pkg_delete -v nodejs smtools zoneinit
+pkg_add -v nodejs smtools zoneinit
+npm install jsontool -g
+
+# Configuring image specific packages
+echo "* Configuring image specific packages.";
+
+/usr/sbin/groupadd -g 10001 jenkins
+/usr/sbin/useradd -u 10001 -g jenkins -d /home/jenkins -m -s /usr/bin/bash jenkins
+
+/usr/bin/wget -c -O /opt/jenkins.war http://mirrors.jenkins-ci.org/war/1.581/jenkins.war
+
+svccfg import /root/jenkins.xml
+
+# Clean up
+echo "* Cleaning up."
+rm -rf /root/*
+
+# Prepare image for provisioning
+sm-prepare-image -y

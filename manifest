@@ -1,0 +1,7 @@
+name="jenkins"
+organization="SmartOS"
+brand="Instance"
+version="0.1.0"
+description="A preconfigured jenkins 1.581 instance"
+homepage="https://github.com/datasets-at/mi-jenkins"
+users="root admin"
