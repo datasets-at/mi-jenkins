@@ -27,7 +27,7 @@ svccfg import /root/jenkins.xml
 
 # Create ssl folder for nginx
 echo "* create ssl folder for nginx"
-mkdir -p /opt/local/nginx/ssl
+mkdir -p /opt/local/etc/nginx/ssl
 
 # Clean up
 echo "* Cleaning up."
