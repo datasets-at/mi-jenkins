@@ -5,6 +5,7 @@ host=$(mdata-get sdc:hostname)
 cert_dir='/opt/local/etc/nginx/ssl/'
 
 # SSL
+log "nginx ssl setup"
 if mdata-get nginx_ssl 1>/dev/null 2>&1; then
 	mdata-get nginx_ssl > ${cert_dir}nginx.pem
 else
@@ -15,3 +16,7 @@ else
 	cat ${cert_dir}nginx.crt ${cert_dir}nginx.key > ${cert_dir}nginx.pem
 fi
 chmod 400 ${cert_dir}nginx.pem
+
+# Enable nginx
+log "starting nginx"
+svcadm enable svc:/pkgsrc/nginx:defaul
