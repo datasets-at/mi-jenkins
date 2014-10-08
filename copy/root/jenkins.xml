@@ -24,7 +24,7 @@
     </property_group>
     <property_group name="application" type="application">
       <propval name="http_port" type="astring" value="8080" />
-      <propval name="http_listen_address" type="astring" value="0.0.0.0" />
+      <propval name="http_listen_address" type="astring" value="127.0.0.1" />
       <propval name="https_port" type="astring" value="-1" />
       <propval name="https_listen_address" type="astring" value="0.0.0.0" />
       <propval name="prefix" type="astring" value="" />

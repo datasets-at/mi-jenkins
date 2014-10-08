@@ -3,3 +3,4 @@ openjdk7
 git-base
 subversion-base
 cvs
+nginx
