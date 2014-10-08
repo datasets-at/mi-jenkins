@@ -19,4 +19,4 @@ chmod 400 ${cert_dir}nginx.pem
 
 # Enable nginx
 log "starting nginx"
-svcadm enable svc:/pkgsrc/nginx:defaul
+svcadm enable svc:/pkgsrc/nginx:default
