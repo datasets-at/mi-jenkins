@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
-JENKINS_VERSION='1.581'
+JENKINS_VERSION='1.583'
 
 # Exit if any commands fail
 set -o errexit
