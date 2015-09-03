@@ -1,3 +1,6 @@
+0.1.3: Bump Jenkins
+* fix #2 by removing the obsolete metadata request
+
 0.1.0: Initial release
 * openjdk7
 * git
