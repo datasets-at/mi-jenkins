@@ -1,5 +1,5 @@
 # List packages to add to your image one per line.
-openjdk7
+openjdk8
 git-base
 subversion-base
 cvs
